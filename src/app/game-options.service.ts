@@ -11,7 +11,7 @@ export class GamesService {
   winner: string = '';
   private gameOptions = [
     {
-      // Flower unfilled nocircle
+      // Flower (unfilled) nocircle
       id: 1,
       images: [
         {
@@ -33,7 +33,7 @@ export class GamesService {
       ],
     },
     {
-      // Leaf filled nocircle
+      // Leaf filled (nocircle)
       id: 2,
       images: [
         {
@@ -53,10 +53,9 @@ export class GamesService {
           winner: false,
         },
       ],
-      winner: '2',
     },
     {
-      // flower filled circle
+      // (flower) filled circle
       id: 3,
       images: [
         {
@@ -76,7 +75,72 @@ export class GamesService {
           winner: false,
         },
       ],
-      winner: '1',
+    },
+    {
+      // Leaf (filled) circle
+      id: 4,
+      images: [
+        {
+          url: 'leaf-filled-circle.png',
+          winner: true,
+        },
+        {
+          url: 'leaf-unfilled-nocircle.png',
+          winner: false,
+        },
+        {
+          url: 'flower-unfilled-nocircle.png',
+          winner: false,
+        },
+        {
+          url: 'flower-unfilled-circle.png',
+          winner: false,
+        },
+      ],
+    },
+    {
+      // flower filled (circle)
+      id: 5,
+      images: [
+        {
+          url: 'flower-filled-circle.png',
+          winner: true,
+        },
+        {
+          url: 'leaf-unfilled-nocircle.png',
+          winner: false,
+        },
+        {
+          url: 'leaf-filled-nocircle.png',
+          winner: false,
+        },
+        {
+          url: 'flower-unfilled-nocircle.png',
+          winner: false,
+        },
+      ],
+    },
+    {
+      // (leaf) filled circle
+      id: 5,
+      images: [
+        {
+          url: 'leaf-filled-nocircle.png',
+          winner: true,
+        },
+        {
+          url: 'flower-unfilled-nocircle.png',
+          winner: false,
+        },
+        {
+          url: 'flower-filled-circle.png',
+          winner: false,
+        },
+        {
+          url: 'flower-unfilled-circle.png',
+          winner: false,
+        },
+      ],
     },
   ];
 

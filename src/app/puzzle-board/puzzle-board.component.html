@@ -1,6 +1,18 @@
-<img [src]="src1" (click)="checkWinner('0')" />
-<img [src]="src2" (click)="checkWinner('1')" />
-<img [src]="src3" (click)="checkWinner('2')" />
-<img [src]="src4" (click)="checkWinner('3')" />
-<p>{{ counter }}</p>
-<button (click)="onReset()">reset</button>
+<section class="puzzle-board">
+  <div class="puzzle-piece">
+    <img [src]="src1" (click)="checkWinner('0')" />
+  </div>
+  <div class="puzzle-piece">
+    <img [src]="src2" (click)="checkWinner('1')" />
+  </div>
+  <div class="puzzle-piece">
+    <img [src]="src3" (click)="checkWinner('2')" />
+  </div>
+  <div class="puzzle-piece">
+    <img [src]="src4" (click)="checkWinner('3')" />
+  </div>
+</section>
+<div class="puzzle-info">
+  <p>{{ counter }}</p>
+  <button (click)="onReset()">reset</button>
+</div>
