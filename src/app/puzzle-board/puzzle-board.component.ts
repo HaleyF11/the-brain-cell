@@ -15,6 +15,7 @@ export class PuzzleBoardComponent {
   }
 
   counter = 0;
+  correctAnswer?: boolean;
 
   get src1() {
     return this.gamesService.gameBoard[0].url;
@@ -34,9 +35,17 @@ export class PuzzleBoardComponent {
       this.counter++;
       this.gamesService.resetGameBoard();
       this.gamesService.shuffleGameBoard(this.gamesService.gameBoard);
+      this.correctAnswer = true;
+      setTimeout(() => {
+        this.correctAnswer = undefined;
+      }, 500);
     } else {
       this.onReset();
       this.counter = 0;
+      this.correctAnswer = false;
+      setTimeout(() => {
+        this.correctAnswer = undefined;
+      }, 500);
     }
   }
 

@@ -13,6 +13,12 @@
   </div>
 </section>
 <div class="puzzle-info">
-  <p>{{ counter }}</p>
+  <p
+    [class.correct]="correctAnswer"
+    [class.false]="correctAnswer === false"
+    [class.default]="correctAnswer === undefined"
+  >
+    {{ counter }}
+  </p>
   <button (click)="onReset()">reset</button>
 </div>
