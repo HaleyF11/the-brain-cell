@@ -1,15 +1,31 @@
 <section class="puzzle-board">
   <div class="puzzle-piece">
-    <img [src]="src1" (click)="checkWinner('0')" />
+    <img
+      [class.normal]="difficulty === 'normal'"
+      [src]="src1"
+      (click)="checkWinner('0')"
+    />
   </div>
   <div class="puzzle-piece">
-    <img [src]="src2" (click)="checkWinner('1')" />
+    <img
+      [class.normal]="difficulty === 'normal'"
+      [src]="src2"
+      (click)="checkWinner('1')"
+    />
   </div>
   <div class="puzzle-piece">
-    <img [src]="src3" (click)="checkWinner('2')" />
+    <img
+      [class.normal]="difficulty === 'normal'"
+      [src]="src3"
+      (click)="checkWinner('2')"
+    />
   </div>
   <div class="puzzle-piece">
-    <img [src]="src4" (click)="checkWinner('3')" />
+    <img
+      [class.normal]="difficulty === 'normal'"
+      [src]="src4"
+      (click)="checkWinner('3')"
+    />
   </div>
 </section>
 <div class="puzzle-info">
@@ -20,5 +36,12 @@
   >
     {{ counter }}
   </p>
-  <button (click)="onReset()">reset</button>
+  <div class="difficulties">
+    <h2>Game Modes</h2>
+    <div class="button-group">
+      <button (click)="onSetDifficulty('easy')">Easy</button>
+      <button (click)="onSetDifficulty('normal')">Normal</button>
+    </div>
+  </div>
+  <button class="reset" (click)="onReset()">Reset Score</button>
 </div>

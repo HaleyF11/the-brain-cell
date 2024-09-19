@@ -5,7 +5,7 @@ section.puzzle-board {
   .puzzle-piece {
     border: 2px solid black;
     display: flex;
-    img {
+    img.normal {
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
     }
@@ -37,13 +37,42 @@ section.puzzle-board {
       color: #4bc25b;
     }
   }
-  button {
-    background-color: white;
+  .difficulties {
+    margin-bottom: 20px;
+    h2 {
+      text-align: center;
+    }
+    .button-group {
+      display: flex;
+      gap: 20px;
+      button {
+        background-color: transparent;
+        border: 2px solid #5b4bc2;
+        color: #5b4bc2;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.35s ease-out;
+        width: 200px;
+        &:hover {
+          background-color: #5b4bc2;
+          color: white;
+          transition: all 0.35s ease-out;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  button.reset {
+    background-color: transparent;
     border: 2px solid #cf7e71;
     color: #c25b4b;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 25px;
+    font-weight: 700;
     text-transform: uppercase;
     transition: all 0.35s ease-out;
     &:hover {

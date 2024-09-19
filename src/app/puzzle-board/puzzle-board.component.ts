@@ -16,6 +16,7 @@ export class PuzzleBoardComponent {
 
   counter = 0;
   correctAnswer?: boolean;
+  difficulty = 'normal';
 
   get src1() {
     return this.gamesService.gameBoard[0].url;
@@ -53,5 +54,9 @@ export class PuzzleBoardComponent {
     this.gamesService.resetGameBoard();
     this.counter = 0;
     this.gamesService.shuffleGameBoard(this.gamesService.gameBoard);
+  }
+
+  onSetDifficulty(difficulty: string) {
+    this.difficulty = difficulty;
   }
 }
